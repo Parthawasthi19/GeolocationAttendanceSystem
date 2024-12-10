@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Attendance System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        form {
+            margin: 20px auto;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        form input, form button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teacher Attendance System</h1>
+
+    <form id="teacherForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="text" id="id" placeholder="ID Number" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="lesson" placeholder="Lesson Number" required>
+        <input type="text" id="course" placeholder="Course" required>
+        <input type="text" id="subject" placeholder="Subject" required>
+        <button type="submit">Log In</button>
+    </form>
+
+    <button id="startAttendance" disabled>Start Attendance</button>
+    <button id="stopAttendance" disabled>Stop Attendance</button>
+    <button id="exportBtn" disabled>Export to Excel</button>
+    
+    <table id="attendanceTable">
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
